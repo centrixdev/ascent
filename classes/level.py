@@ -19,9 +19,11 @@ class Level:
 
         self.setup(tmx_map)
         self.world = pygame.Surface((320, 180))
+        self.is_won = False
 
     def setup(self, tmx_map):
 
+        win = None
         spawn_location = None
 
         for layer in tmx_map.visible_layers:
@@ -35,11 +37,18 @@ class Level:
                 for obj in layer:
                     if obj.type == "Player" and obj.name == "Spawn":
                         spawn_location = (obj.x, obj.y)
+                    if obj.type == "Player" and obj.name == "Win":
 
-        if spawn_location is not None:
-            self.all_sprites.add(Player(spawn_location, self.collision_sprites, self.damage_sprites, self.all_sprites))
+                        win = (obj.x, obj.y, obj.width, obj.height)
+
+        if spawn_location is not None and win is not None:
+            self.player = Player(spawn_location, win, self.collision_sprites, self.damage_sprites, self.all_sprites)
+            self.all_sprites.add(self.player)
 
     def run(self):
+        if self.player and self.player.has_won:
+            self.is_won = True
+
         # clear the display surface
         self.world.fill((0, 0, 0))
 
