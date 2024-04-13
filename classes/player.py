@@ -4,7 +4,6 @@ import pygame.sprite
 class Player(pygame.sprite.Sprite):
     def __init__(self, spawn_location, win, collision_sprites, damage_sprites, all_sprites):
         super().__init__()
-
         self.has_won = False
         self.spawn_location = spawn_location
         self.win = win
@@ -24,49 +23,60 @@ class Player(pygame.sprite.Sprite):
         self.acceleration = pygame.math.Vector2(0, 0)
 
         # kinematic constants
-        self.HORIZ_ACCEL = .085  # wie schnell der Spieler beschleunigt
-        self.HORIZ_FRIC = .5  # wie schnell der Spieler bremst
+        self.HORIZ_ACCEL = .25   # wie schnell der Spieler beschleunigt
+        self.HORIZ_FRIC = .175  # wie schnell der Spieler bremst
 
         self.last_key = None
         self.space_released = True
 
         self.dash_time = 0
         self.dash_direction = pygame.math.Vector2(0, 0)
-        self.dash_speed = 2
+        self.DASH_SPEED = 10
         self.can_dash = True
 
-    def update(self):
+        self.GRAVITY = 0.125
+        self.JUMP_FORCE = -2.5
+
+
+    def update(self, deltaTime):
+
         keys = pygame.key.get_pressed()
 
         # horizontal movement
         if keys[pygame.K_a] and keys[pygame.K_d]:
             if self.last_key == pygame.K_a:
-                self.acceleration.x = self.HORIZ_ACCEL
+                self.acceleration.x = self.HORIZ_ACCEL * deltaTime
             else:
-                self.acceleration.x = -self.HORIZ_ACCEL
+                self.acceleration.x = -self.HORIZ_ACCEL * deltaTime
         elif keys[pygame.K_a]:
-            self.acceleration.x = -self.HORIZ_ACCEL
+            if self.velocity.x > 0:  # moving right, need to decelerate first
+                self.acceleration.x = -self.HORIZ_ACCEL * deltaTime
+            else:  # moving left or stationary, can accelerate
+                self.acceleration.x = -self.HORIZ_ACCEL * deltaTime
             self.last_key = pygame.K_a
         elif keys[pygame.K_d]:
-            self.acceleration.x = self.HORIZ_ACCEL
+            if self.velocity.x < 0:  # moving left, need to decelerate first
+                self.acceleration.x = self.HORIZ_ACCEL * deltaTime
+            else:  # moving right or stationary, can accelerate
+                self.acceleration.x = self.HORIZ_ACCEL * deltaTime
             self.last_key = pygame.K_d
         elif not keys[pygame.K_a] and not keys[pygame.K_d]:
             self.acceleration.x = 0
 
-        self.acceleration.x -= self.velocity.x * self.HORIZ_FRIC
+        self.acceleration.x -= self.velocity.x * self.HORIZ_FRIC * deltaTime
         self.velocity += self.acceleration
 
         # vertical movement + jump
-        self.velocity.y += 0.008  # gravity
+        self.velocity.y += self.GRAVITY * deltaTime  # gravity
         if keys[pygame.K_SPACE] and self.on_ground and self.space_released:
-            self.velocity.y = -.65  # jump force
+            self.velocity.y = self.JUMP_FORCE
             self.space_released = False
         elif not keys[pygame.K_SPACE] and self.on_ground:
             self.space_released = True
 
         # dash
         if keys[pygame.K_LSHIFT] and self.can_dash:
-            self.dash_time = 0.2  # dash duration in seconds
+            self.dash_time = 0.2 * (1/deltaTime)  # dash duration in seconds
             self.dash_direction = pygame.math.Vector2(0, 0)
             if keys[pygame.K_a]:
                 self.dash_direction.x = -.25
@@ -81,13 +91,14 @@ class Player(pygame.sprite.Sprite):
             self.can_dash = False
 
         if self.dash_time > 0:
-            self.velocity = self.dash_direction * self.dash_speed
-            self.dash_time -= 0.005  # assuming 60 frames per second
+            self.velocity = self.dash_direction * self.DASH_SPEED
+            self.dash_time -= 0.02
         elif self.on_ground and not keys[pygame.K_LSHIFT]:
             self.can_dash = True
 
+
         # update y position and check for vertical collisions
-        self.position.y += self.velocity.y
+        self.position.y += self.velocity.y * deltaTime
         self.rect.bottomleft = self.position
         collision = pygame.sprite.spritecollide(self, self.collision_sprites, False)
         if collision:
@@ -110,7 +121,7 @@ class Player(pygame.sprite.Sprite):
             self.rect.y -= 1
 
         # update x position and check for horizontal collisions
-        self.position.x += self.velocity.x
+        self.position.x += self.velocity.x * deltaTime
         self.rect.bottomleft = self.position
         collision = pygame.sprite.spritecollide(self, self.collision_sprites, False)
         if collision:

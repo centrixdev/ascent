@@ -30,17 +30,17 @@ class Steuerung:
     def run(self):
         run = True
         while run:
-            deltaTime = self.clock.tick(240) / 1000 * 60  # framerate independence
+            deltaTime = self.clock.tick(999) / 1000 * 60  # framerate independence
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
 
-            self.current_level.run()
+            self.current_level.run(deltaTime)
             if self.current_level.is_won:
                 self.current_level_number += 1
                 self.current_level = Level(self.tmx_maps[self.current_level_number], self.window)
-
             pygame.display.flip()
+
         pygame.quit()
         exit()

@@ -7,5 +7,5 @@ class Tile(pygame.sprite.Sprite):
         self.image = image
         self.rect = self.image.get_rect(topleft=(x, y))
 
-    def update(self):
+    def update(self, deltaTime):
         pass

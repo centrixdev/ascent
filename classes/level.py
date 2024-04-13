@@ -45,7 +45,7 @@ class Level:
             self.player = Player(spawn_location, win, self.collision_sprites, self.damage_sprites, self.all_sprites)
             self.all_sprites.add(self.player)
 
-    def run(self):
+    def run(self, deltaTime):
         if self.player and self.player.has_won:
             self.is_won = True
 
@@ -53,7 +53,7 @@ class Level:
         self.world.fill((0, 0, 0))
 
         # Update all sprites
-        self.all_sprites.update()
+        self.all_sprites.update(deltaTime)
 
         # Draw all sprites onto self.world
         self.all_sprites.draw(self.world)
