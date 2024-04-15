@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="829c5e7c-cc18-4a9d-acb7-7b132c2b39f6" name="Changes" comment="core game done">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/level.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/level.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/steuerung.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/steuerung.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/tile.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/tile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/data/tmx/level0.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/levels/data/tmx/level0.tmx" afterDir="false" />
-    </list>
+    <list default="true" id="829c5e7c-cc18-4a9d-acb7-7b132c2b39f6" name="Changes" comment="core game done" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,8 +116,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.ascent" />
       <item itemvalue="Python.LevelTest" />
+      <item itemvalue="Python.ascent" />
     </list>
   </component>
   <component name="SharedIndexes">
@@ -154,6 +147,7 @@
       <workItem from="1712867354667" duration="1247000" />
       <workItem from="1712925538152" duration="14071000" />
       <workItem from="1712999056471" duration="5857000" />
+      <workItem from="1713124173926" duration="33000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
