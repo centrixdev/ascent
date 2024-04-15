@@ -5,12 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="829c5e7c-cc18-4a9d-acb7-7b132c2b39f6" name="Changes" comment="core game done">
+      <change afterPath="$PROJECT_DIR$/classes/dash_item.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/ui.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levels/data/tmx/level2.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levels/data/tmx/tut-dash.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levels/data/tmx/tut-fall.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levels/data/tmx/tut-jump.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levels/data/tmx/tut-precise.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/saves/example.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ascent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ascent.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascent.py" beforeDir="false" afterPath="$PROJECT_DIR$/ascent.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/level.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/level.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/steuerung.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/steuerung.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/tile.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/tile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/data/tmx/level0.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/levels/data/tmx/level0.tmx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/ascent.tiled-session" beforeDir="false" afterPath="$PROJECT_DIR$/levels/ascent.tiled-session" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/data/tmx/level0.tmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/data/tmx/level1.tmx" beforeDir="false" afterPath="$PROJECT_DIR$/levels/data/tmx/level1.tmx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leveltest.py" beforeDir="false" afterPath="$PROJECT_DIR$/leveltest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +49,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/centrixdev/ascent.git&quot;,
-    &quot;accountId&quot;: &quot;e9936c23-2cbb-4487-bade-d96f9bb03202&quot;
+    &quot;accountId&quot;: &quot;cafbfdde-b641-4e6a-a591-0bc5697a186c&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -64,7 +77,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -83,7 +96,6 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.11 (ascent)" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -107,7 +119,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.11 (ascent)" />
+      <option name="SDK_NAME" value="Python 3.10 (ascent)" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -154,6 +166,9 @@
       <workItem from="1712867354667" duration="1247000" />
       <workItem from="1712925538152" duration="14071000" />
       <workItem from="1712999056471" duration="5857000" />
+      <workItem from="1713160430856" duration="280000" />
+      <workItem from="1713160721523" duration="475000" />
+      <workItem from="1713161209800" duration="16373000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -193,7 +208,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="core game done" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ascent$ascent.coverage" NAME="ascent Coverage Results" MODIFIED="1713006422904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ascent$LevelTest.coverage" NAME="LevelTest Coverage Results" MODIFIED="1712838234622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/ascent$ascent.coverage" NAME="ascent Coverage Results" MODIFIED="1713189005718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

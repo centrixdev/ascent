@@ -3,7 +3,7 @@ from pytmx.util_pygame import load_pygame
 
 pygame.init()
 screen = pygame.display.set_mode((1280, 720))
-tmx_data = load_pygame("levels/data/tmx/level0.tmx")
+tmx_data = load_pygame("levels/data/tmx/tut-jump.tmx.tmx")
 layer = tmx_data.get_layer_by_name("Graybox")
 for x,y,surf in layer.tiles():
     print(x*8)
