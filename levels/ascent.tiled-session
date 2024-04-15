@@ -73,17 +73,66 @@
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 4,
+            "scale": 2.2309,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 173.9208391232238,
+                "y": 93.0117889640952
+            }
+        },
+        "data/tmx/level1.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 2.232,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 106.375,
-                "y": 104.75
+                "x": 150.53763440860214,
+                "y": 122.08781362007167
+            }
+        },
+        "data/tmx/level2.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 2.6303124999999996,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 159.67684448140668,
+                "y": 146.56053225614826
+            }
+        },
+        "data/tmx/tut-fall.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 2.6303124999999996,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 198.45550671260548,
+                "y": 75.84650112866817
+            }
+        },
+        "data/tmx/tut-jump.tmx": {
+            "scale": 2.6303124999999996,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 160.05702744445767,
+                "y": 92.1943685398598
             }
         },
         "data/tsx/GrayboxSet.tsx": {
             "dynamicWrapping": true,
             "scaleInDock": 5.5,
             "scaleInEditor": 1
+        },
+        "data/tsx/level3.tmx": {
+            "scale": 2.6303124999999996,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 160.05702744445767,
+                "y": 92.1943685398598
+            }
         },
         "level1.tmx": {
             "scale": 0.9418359375,

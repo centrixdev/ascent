@@ -5,6 +5,7 @@ from classes.player import Player
 
 class Level:
     def __init__(self, tmx_map, window):
+        self.is_paused = None
         self.player = None
         self.window = window
         self.display_surface = pygame.display.get_surface()
@@ -46,6 +47,8 @@ class Level:
             self.all_sprites.add(self.player)
 
     def run(self, deltaTime):
+        if self.is_paused:
+            return
         if self.player and self.player.has_won:
             self.is_won = True
 
@@ -63,3 +66,6 @@ class Level:
 
         # Blit the scaled game world onto the display surface
         self.display_surface.blit(scaled_game_world, (0, 0))
+
+    def toggle_pause(self):
+        self.is_paused = not self.is_paused

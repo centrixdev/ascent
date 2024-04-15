@@ -1,4 +1,3 @@
-import pygame
 from classes.steuerung import Steuerung
 
 SCREEN_WIDTH = 1280

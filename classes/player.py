@@ -42,6 +42,8 @@ class Player(pygame.sprite.Sprite):
 
         keys = pygame.key.get_pressed()
 
+        if deltaTime > 50:  # pause when tabbed out
+            return
         # horizontal movement
         if keys[pygame.K_a] and keys[pygame.K_d]:
             if self.last_key == pygame.K_a:
