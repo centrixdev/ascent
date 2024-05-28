@@ -4,7 +4,85 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="829c5e7c-cc18-4a9d-acb7-7b132c2b39f6" name="Changes" comment="core game done" />
+    <list default="true" id="829c5e7c-cc18-4a9d-acb7-7b132c2b39f6" name="Changes" comment="delete unnecessary files">
+      <change afterPath="$PROJECT_DIR$/classes/button.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/camera.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/game.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/interaction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/menu/level_select.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/menu/options.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/menu/start.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/timer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/interaction/container.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/interaction/interaction_container.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/interaction/interaction_player.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/interaction/interaction_popup.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/interaction/player.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/interaction/popup.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/interaction/sign_container.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/munro.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/player/dash/diag_down.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/player/dash/diag_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/player/dash/diag_up.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/player/dash/diag_up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/player/dash/down.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/player/dash/down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/player/dash/horiz.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/player/dash/horiz.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/player/dash/up.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/player/dash/up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/player/death.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/player/death.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/player/idle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/player/player.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/player/player_run.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/player/player_run_init.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/player/run.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/player/run_init.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/player/starting_animation.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/player/starting_animation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/tilesets/kitchen/kitchen.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/tilesets/kitchen/kitchen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/tilesets/kitchen/kitchen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/tilesets/kitchen/kitchen_autotile.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/tilesets/kitchen/rules.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/tilesets/night/Night.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/tilesets/night/night.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/tilesets/tilesets.tiled-project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/tilesets/tilesets.tiled-session" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/tilesets/wood/Rules/autotile_rules.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/tilesets/wood/Rules/autotile_rules_fall.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/tilesets/wood/Wood.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/tilesets/wood/rules.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/tilesets/wood/wood.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/tilesets/wood/wood.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/tilesets/wood/wood_autotile.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levels/interactions/level0.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/saves/0.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/saves/1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ascent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ascent.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascent.py" beforeDir="false" afterPath="$PROJECT_DIR$/ascent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/level.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/level.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/player.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/steuerung.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/tile.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/tile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/ui.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/ascent.tiled-project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/ascent.tiled-session" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/data/tmx/level1.tmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/data/tmx/level2.tmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/data/tmx/tut-dash.tmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/data/tmx/tut-fall.tmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/data/tmx/tut-jump.tmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/data/tmx/tut-precise.tmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/data/tsx/GrayboxSet.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/graphics/back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/graphics/object.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/graphics/spikes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saves/example.json" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,21 +127,28 @@
     &quot;Python.LevelTest.executor&quot;: &quot;Run&quot;,
     &quot;Python.ascent.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ToolWindowGitHub Copilot Chat.ShowToolbar&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/dominik/PycharmProjects/ascent/leveltest.py&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dominik/PycharmProjects/ascent/levels/interactions&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dominik\PycharmProjects\ascent\levels\interactions" />
+      <recent name="C:\Users\dominik\PycharmProjects\ascent\classes" />
       <recent name="C:\Users\dominik\PycharmProjects\ascent" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dominik\PycharmProjects\ascent\graphics" />
     </key>
   </component>
   <component name="RunManager" selected="Python.ascent">
@@ -148,6 +233,22 @@
       <workItem from="1712925538152" duration="14071000" />
       <workItem from="1712999056471" duration="5857000" />
       <workItem from="1713124173926" duration="33000" />
+      <workItem from="1713198993554" duration="12516000" />
+      <workItem from="1713273841741" duration="1244000" />
+      <workItem from="1713301619636" duration="349000" />
+      <workItem from="1715199988368" duration="190000" />
+      <workItem from="1716367404849" duration="23787000" />
+      <workItem from="1716400377733" duration="400000" />
+      <workItem from="1716453066251" duration="8717000" />
+      <workItem from="1716564130909" duration="4021000" />
+      <workItem from="1716591995232" duration="428000" />
+      <workItem from="1716720400312" duration="30744000" />
+      <workItem from="1716756796503" duration="6344000" />
+      <workItem from="1716803141335" duration="1298000" />
+      <workItem from="1716821138786" duration="14086000" />
+      <workItem from="1716840428488" duration="2470000" />
+      <workItem from="1716845038992" duration="10290000" />
+      <workItem from="1716865815151" duration="23900000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -173,21 +274,41 @@
       <option name="project" value="LOCAL" />
       <updated>1712934349441</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="delete unnecessary files">
+      <option name="closed" value="true" />
+      <created>1713199098546</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713199098546</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial commit" />
     <MESSAGE value="level system + movement" />
     <MESSAGE value="core game done" />
-    <option name="LAST_COMMIT_MESSAGE" value="core game done" />
+    <MESSAGE value="delete unnecessary files" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete unnecessary files" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ascent$ascent.coverage" NAME="ascent Coverage Results" MODIFIED="1713006422904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/ascent$ascent.coverage" NAME="ascent Coverage Results" MODIFIED="1716913816761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ascent$LevelTest.coverage" NAME="LevelTest Coverage Results" MODIFIED="1712838234622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

@@ -1,0 +1,32 @@
+{
+  "interactions":[
+    {
+      "id": "intro",
+      "type": "sign",
+      "content": [
+        "Druecke die Leertaste, um weiter zu lesen.",
+        "Willkommen in ASCENT",
+        "Du befindest dich in einem gesunkenen Schiff",
+        "Dein Ziel ist es, das Deck zu erreichen,",
+        "und herauszufinden, was passiert ist."
+      ]
+    },
+    {
+      "id": "dash_up",
+      "type": "sign",
+      "content": [
+        "So hoch kannst du nicht springen!",
+        "Druecke SHIFT um mit deiner Tinte zu DASHEN"
+      ]
+    },
+    {
+      "id": "dash_dir",
+      "type": "sign",
+      "content": [
+        "Du kannst auch in alle Richtungen dashen",
+        "Nutze die W A S D Tasten zur Bestimmung der Richtung.",
+        "Probier es aus!"
+      ]
+    }
+  ]
+}

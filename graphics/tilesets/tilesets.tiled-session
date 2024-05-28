@@ -1,0 +1,100 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "wood/Rules/autotile_rules.tmx",
+    "automapping.whileDrawing": false,
+    "expandedProjectPaths": [
+        "wood",
+        "wood/Rules",
+        "kitchen/Rules",
+        ".",
+        "kitchen"
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        ":/automap-tiles.tsx": {
+            "scaleInDock": 1
+        },
+        "kitchen/Rules/autotile_rules.tmx": {
+            "scale": 8,
+            "selectedLayer": 12,
+            "viewCenter": {
+                "x": 159.75,
+                "y": 139
+            }
+        },
+        "kitchen/Rules/rules_single.tmx": {
+            "scale": 2.778030303030303,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 120.22907008453777,
+                "y": 132.10799018271067
+            }
+        },
+        "kitchen/kitchen.tsx": {
+            "scaleInDock": 8,
+            "scaleInEditor": 5.5
+        },
+        "kitchen/kitchen_autotile.tmx": {
+            "scale": 4,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 199.5,
+                "y": 94
+            }
+        },
+        "kitchen/test.tmx": {
+            "scale": 5.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 120.0909090909091,
+                "y": 80.0909090909091
+            }
+        },
+        "wood/Rules/autotile_rules.tmx": {
+            "scale": 2.639488636363636,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 134.87460983747712,
+                "y": 108.35432138628781
+            }
+        },
+        "wood/wood.tsx": {
+            "scaleInDock": 1
+        },
+        "wood/wood_autotile.tmx": {
+            "scale": 3.859375,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 107.53036437246963,
+                "y": 61.927125506072876
+            }
+        }
+    },
+    "last.imagePath": "C:/Users/dominik/PycharmProjects/ascent/graphics/tilesets/kitchen",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 8,
+    "map.tileWidth": 8,
+    "openFiles": [
+        "kitchen/Rules/autotile_rules.tmx",
+        "kitchen/kitchen_autotile.tmx",
+        "wood/Rules/autotile_rules.tmx"
+    ],
+    "project": "tilesets.tiled-project",
+    "recentFiles": [
+        "kitchen/Rules/autotile_rules.tmx",
+        "kitchen/kitchen_autotile.tmx",
+        "wood/Rules/autotile_rules.tmx",
+        "kitchen/Rules/rules_single.tmx",
+        "kitchen/kitchen.tsx",
+        "kitchen/test.tmx",
+        "wood/wood_autotile.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 8,
+        "width": 8
+    }
+}
