@@ -10,12 +10,11 @@ from classes.player import Player
 from classes.camera import Camera
 
 
-
-
 class Level:
     def __init__(self, tmx_map, window, level_number, deaths, save_progress):
 
-        self.DEV_MODE = True
+        self.visited = set()
+
         # controlling the pause menu
 
         self.UP_KEY = False
@@ -63,47 +62,48 @@ class Level:
     def setup(self, tmx_map):
 
         spawn_location = None
-
         # Make the scrolling layer
         map_layer = pyscroll.BufferedRenderer(
             data=pyscroll.TiledMapData(tmx_map),
             size=(320, 180),
-
         )
+
 
         # make the pygame SpriteGroup with a scrolling map
         self.all_sprites = pyscroll.PyscrollGroup(map_layer=map_layer)
 
 
-
-
         for layer in tmx_map.visible_layers:
-            if layer.name.startswith('terrain_') or layer.name.endswith('_fall') or (
-                    self.DEV_MODE and layer.name.startswith('prototype')):
-                for x, y, image in layer.tiles():
-                    if layer.name.endswith('_fall'):
-                        blocks = self.find_connected_blocks(layer)
-                        for block in blocks:
-                            x, y, width, height = block
-                            tile = FallingTile(x * 8, y * 8, image, self.collision_sprites, self.falling_sprites, height=height - 8, width=width - 8,
-                                 right=False,
-                                 down=False)
-                            break
-                    else:
-                        Tile(x * 8, y * 8, image, self.collision_sprites, height=8, width=8, right=False,
+            if layer.name.startswith('prototype'):
+                layer.visible = False
+            if layer.name.startswith('terrain_'):
+                if layer.name.endswith('_fall'):
+
+                    layer.visible = False
+                    blocks = self.find_connected_blocks(layer)
+                    for block in blocks:
+                        x, y, width, height, images = block['x'], block['y'], block['width'], block['height'], block['images']
+                        # tile = FallingTile(x * 8, y * 8, images, self.collision_sprites,
+                        #                    self.falling_sprites, height=height * 8, width=width * 8,
+                        #                    right=False,
+                        #                    down=False, )
+                        # self.all_sprites.add(tile)
+                for x, y , image in layer.tiles():
+                    if not layer.name.endswith('_fall'):
+                        Tile(x * 8, y * 8, self.collision_sprites, height=8, width=8, right=False,
                              down=False)
             elif layer.name == "damage_down":
                 for x, y, image in layer.tiles():
-                    Tile(x * 8, y * 8, image, self.damage_sprites, height=4, width=10, right=False,
+                    Tile(x * 8, y * 8, self.damage_sprites, height=4, width=10, right=False,
                          down=True)
 
             elif layer.name == "damage_left":
                 for x, y, image in layer.tiles():
-                    Tile(x * 8, y * 8, image, self.damage_sprites, height=8, width=4, right=False,
+                    Tile(x * 8, y * 8, self.damage_sprites, height=8, width=4, right=False,
                          down=False)
             elif layer.name == "damage_right":
                 for x, y, image in layer.tiles():
-                    Tile(x * 8, y * 8, image, self.damage_sprites, height=8, width=4, right=True,
+                    Tile(x * 8, y * 8, self.damage_sprites, height=8, width=4, right=True,
                          down=False)
             elif layer.name == "Locations":
                 for obj in layer:
@@ -113,17 +113,19 @@ class Level:
                         self.win_area = (obj.x, obj.y, obj.width, obj.height)
                     elif obj.type == "Player" and obj.name == "OutOfBounds":
                         outofbounds_rect = pygame.Rect(obj.x, obj.y, obj.width, obj.height)
-                        Tile(outofbounds_rect.x, outofbounds_rect.y, None, self.damage_sprites,
+                        Tile(outofbounds_rect.x, outofbounds_rect.y, self.damage_sprites,
                              height=outofbounds_rect.height, width=outofbounds_rect.width, right=False, down=False)
                     elif obj.type == "Player" and obj.name == "Barrier":
                         barrier_rect = pygame.Rect(obj.x, obj.y, obj.width, obj.height)
-                        Tile(barrier_rect.x, barrier_rect.y, None, self.collision_sprites,
+                        Tile(barrier_rect.x, barrier_rect.y, self.collision_sprites,
                              height=barrier_rect.height, width=barrier_rect.width,
                              right=False, down=False)
                     elif obj.type == "Checkpoint":
                         self.checkpoints.append((obj.x, obj.y, obj.width, obj.height))
                     elif obj.type == "Interaction":
                         self.interactions.append((obj.x, obj.y, obj.width, obj.height, obj.name))
+
+
         if spawn_location is not None and self.win_area is not None:
             self.player = Player(spawn_location, self)
             self.camera = Camera(self.player, self.all_sprites)
@@ -238,7 +240,6 @@ class Level:
 
         for sprite in self.falling_sprites:
             if sprite.is_falling:
-
                 sprite.animate(deltaTime)
 
         # Draw all sprites onto self.world
@@ -256,13 +257,9 @@ class Level:
 
     def draw(self):
         if self.player.animation_state == 'start_finished' and self.start_sequence > 0 and not self.show_starting_frame:
-            Tile(self.player.rect.x, self.player.rect.y, self.player.start_frames[0],
-                 self.all_sprites, height=32, width=32, right=False, down=False)
+            Tile(self.player.rect.x, self.player.rect.y,
+                 self.all_sprites, height=32, width=32, right=False, down=False, image=self.player.start_frames[0])
             self.show_starting_frame = True
-
-        for sprite in self.falling_sprites:
-            pass
-            # sprite.draw_fall(self.world)
         self.all_sprites.draw(self.world)
         if self.current_interaction is not None:
             self.current_interaction.draw(self.world)
@@ -328,37 +325,49 @@ class Level:
         self.display_surface.blit(scaled_game_world, blit_pos)
 
     def find_connected_blocks(self, layer):
-        visited = set()
         blocks = []
-        for x, y, image in layer.tiles():
-            if (x, y) not in visited:
-                block = self.find_block(layer, x, y, visited)
-                blocks.append(block)
+
+        for x in range(layer.width):
+            for y in range(layer.height):
+                block = self.find_block(layer, x, y)
+                if block is not None:
+                    blocks.append(block)
         return blocks
 
-    def find_block(self, layer, x, y, visited):
-        # Use a stack to perform depth-first search
-        stack = [(x, y)]
-        block = [x, y, 1, 1]  # x, y, width, height
-        while stack:
+    def find_block(self, layer, x, y):
+        if layer.data[y][x] == 0 or (x, y) in self.visited:
+            return None
 
-            x, y = stack.pop()
-            visited.add((x, y))
-            # Check the four adjacent tiles
-            if x - 1 >= 0 and (x - 1, y) not in visited and layer.data[y][x - 1] == layer.data[y][x]:  # left
-                stack.append((x - 1, y))
-                block[0] = min(block[0], x - 1)  # update x
-                block[2] += 1  # update width
-            if x + 1 < layer.width and (x + 1, y) not in visited and layer.data[y][x + 1] == layer.data[y][x]:  # right
-                stack.append((x + 1, y))  # update x
-                block[2] += 8  # update width
-            if y - 1 >= 0 and (x, y - 1) not in visited and layer.data[y - 1][x] == layer.data[y][x]:  # up
-                stack.append((x, y - 1))
-                block[1] = min(block[1], y - 1)  # update y
-                block[3] += 8  # update height
-            if y + 1 < layer.height and (x, y + 1) not in visited and layer.data[y + 1][x] == layer.data[y][x]:  # down
-                stack.append((x, y + 1))
-                block[3] += 8  # update height
-            # self.all_sprites.remove(self.all_sprites.get_sprites_at((x * 8, y * 8)))
+        self.visited.add((x, y))
 
+        # Initialize the block's properties
+        block = {
+            'x': x,
+            'y': y,
+            'width': 1,
+            'height': 1,
+            'images': []
+        }
+
+        # Find the image of the block
+        for xb, yb, imageb in layer.tiles():
+            if (xb, yb) == (x, y):
+                block['images'].append(imageb)
+
+        # Check the neighboring blocks
+        for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+            nx, ny = x + dx, y + dy
+            if 0 <= nx < layer.width and 0 <= ny < layer.height:
+                neighbor_block = self.find_block(layer, nx, ny)
+                if neighbor_block is not None:
+                    # Merge the neighboring block with the current block
+                    min_x = min(block['x'], neighbor_block['x'])
+                    min_y = min(block['y'], neighbor_block['y'])
+                    max_x = max(block['x'] + block['width'], neighbor_block['x'] + neighbor_block['width'])
+                    max_y = max(block['y'] + block['height'], neighbor_block['y'] + neighbor_block['height'])
+                    block['x'] = min_x
+                    block['y'] = min_y
+                    block['width'] = max_x - min_x
+                    block['height'] = max_y - min_y
+                    block['images'].extend(neighbor_block['images'])
         return block

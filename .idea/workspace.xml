@@ -4,84 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="829c5e7c-cc18-4a9d-acb7-7b132c2b39f6" name="Changes" comment="delete unnecessary files">
-      <change afterPath="$PROJECT_DIR$/classes/button.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/camera.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/game.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/interaction.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/menu/level_select.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/menu/options.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/menu/start.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/timer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/interaction/container.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/interaction/interaction_container.aseprite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/interaction/interaction_player.aseprite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/interaction/interaction_popup.aseprite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/interaction/player.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/interaction/popup.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/interaction/sign_container.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/munro.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/player/dash/diag_down.aseprite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/player/dash/diag_down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/player/dash/diag_up.aseprite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/player/dash/diag_up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/player/dash/down.aseprite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/player/dash/down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/player/dash/horiz.aseprite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/player/dash/horiz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/player/dash/up.aseprite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/player/dash/up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/player/death.aseprite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/player/death.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/player/idle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/player/player.aseprite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/player/player_run.aseprite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/player/player_run_init.aseprite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/player/run.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/player/run_init.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/player/starting_animation.aseprite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/player/starting_animation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/tilesets/kitchen/kitchen.aseprite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/tilesets/kitchen/kitchen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/tilesets/kitchen/kitchen.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/tilesets/kitchen/kitchen_autotile.tmx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/tilesets/kitchen/rules.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/tilesets/night/Night.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/tilesets/night/night.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/tilesets/tilesets.tiled-project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/tilesets/tilesets.tiled-session" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/tilesets/wood/Rules/autotile_rules.tmx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/tilesets/wood/Rules/autotile_rules_fall.tmx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/tilesets/wood/Wood.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/tilesets/wood/rules.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/tilesets/wood/wood.aseprite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/tilesets/wood/wood.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/tilesets/wood/wood_autotile.tmx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/levels/interactions/level0.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saves/0.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/saves/1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ascent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ascent.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="829c5e7c-cc18-4a9d-acb7-7b132c2b39f6" name="Changes" comment="stable except falling blocks don't work">
+      <change afterPath="$PROJECT_DIR$/levels/worlds/kitchen/level0.tmx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ascent.py" beforeDir="false" afterPath="$PROJECT_DIR$/ascent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/game.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/level.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/level.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/steuerung.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/tile.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/tile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/ui.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/ascent.tiled-project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/ascent.tiled-session" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/data/tmx/level1.tmx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/data/tmx/level2.tmx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/data/tmx/tut-dash.tmx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/data/tmx/tut-fall.tmx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/data/tmx/tut-jump.tmx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/data/tmx/tut-precise.tmx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/data/tsx/GrayboxSet.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/graphics/back.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/graphics/object.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/graphics/spikes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/saves/example.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saves/0.json" beforeDir="false" afterPath="$PROJECT_DIR$/saves/0.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +26,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -248,7 +178,13 @@
       <workItem from="1716821138786" duration="14086000" />
       <workItem from="1716840428488" duration="2470000" />
       <workItem from="1716845038992" duration="10290000" />
-      <workItem from="1716865815151" duration="23900000" />
+      <workItem from="1716865815151" duration="27545000" />
+      <workItem from="1716918719550" duration="1084000" />
+      <workItem from="1716923502844" duration="10697000" />
+      <workItem from="1716966277078" duration="16000" />
+      <workItem from="1716966922236" duration="2129000" />
+      <workItem from="1716976119905" duration="37000" />
+      <workItem from="1716976289301" duration="798000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -282,7 +218,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713199098546</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="stable except falling blocks don't work">
+      <option name="closed" value="true" />
+      <created>1716913854487</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716913854487</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,10 +249,12 @@
     <MESSAGE value="level system + movement" />
     <MESSAGE value="core game done" />
     <MESSAGE value="delete unnecessary files" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete unnecessary files" />
+    <MESSAGE value="stable except falling blocks don't work" />
+    <option name="LAST_COMMIT_MESSAGE" value="stable except falling blocks don't work" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ascent$ascent.coverage" NAME="ascent Coverage Results" MODIFIED="1716913816761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/ascent$ascent.coverage" NAME="ascent Coverage Results" MODIFIED="1716967751494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ascent$LevelTest.coverage" NAME="LevelTest Coverage Results" MODIFIED="1712838234622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/kitchen_world$ascent.coverage" NAME="ascent Coverage Results" MODIFIED="1716976355838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

@@ -21,7 +21,7 @@ class Game:
         self.clock = pygame.time.Clock()
 
         self.tmx_maps = {
-            0: load_pygame("levels/worlds/kitchen/level0.tmx"),
+            0: load_pygame("levels/worlds/kitchen/level0.tmx", load_all=False),
 
         }
         self.current_level_number = 0
