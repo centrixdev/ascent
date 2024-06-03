@@ -26,10 +26,10 @@ class Level:
 
         self.camera = None
 
-        if level_number == 1:
+        if level_number == 0:
             self.start_sequence = 500
         else:
-            self.start_sequence = 50
+            self.start_sequence = 0
 
         self.debug = False
 

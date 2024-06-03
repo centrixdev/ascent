@@ -1,0 +1,2 @@
+..\..\..\graphics\tilesets\kitchen\rules.txt
+..\..\..\graphics\tilesets\wood\rules.txt

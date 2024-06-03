@@ -4,12 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="829c5e7c-cc18-4a9d-acb7-7b132c2b39f6" name="Changes" comment="stable except falling blocks don't work">
-      <change afterPath="$PROJECT_DIR$/levels/worlds/kitchen/level0.tmx" afterDir="false" />
+    <list default="true" id="829c5e7c-cc18-4a9d-acb7-7b132c2b39f6" name="Changes" comment="disabled FallingTiles for now">
+      <change afterPath="$PROJECT_DIR$/levels/worlds/0_kitchen/kitchen.world" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levels/worlds/0_kitchen/level0.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levels/worlds/0_kitchen/rules.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levels/worlds/0_kitchen/screen_0_0.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levels/worlds/0_kitchen/screen_0_1.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levels/worlds/0_kitchen/screen_1_0.tmx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/camera.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/camera.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/game.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/level.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/level.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/tile.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/tile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/worlds/kitchen/level0.tmx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/saves/0.json" beforeDir="false" afterPath="$PROJECT_DIR$/saves/0.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -184,7 +190,10 @@
       <workItem from="1716966277078" duration="16000" />
       <workItem from="1716966922236" duration="2129000" />
       <workItem from="1716976119905" duration="37000" />
-      <workItem from="1716976289301" duration="798000" />
+      <workItem from="1716976289301" duration="7783000" />
+      <workItem from="1717067826035" duration="623000" />
+      <workItem from="1717109111225" duration="1864000" />
+      <workItem from="1717147205325" duration="749000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -226,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716913854487</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="disabled FallingTiles for now">
+      <option name="closed" value="true" />
+      <created>1716977331734</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716977331734</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,11 +267,12 @@
     <MESSAGE value="core game done" />
     <MESSAGE value="delete unnecessary files" />
     <MESSAGE value="stable except falling blocks don't work" />
-    <option name="LAST_COMMIT_MESSAGE" value="stable except falling blocks don't work" />
+    <MESSAGE value="disabled FallingTiles for now" />
+    <option name="LAST_COMMIT_MESSAGE" value="disabled FallingTiles for now" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ascent$ascent.coverage" NAME="ascent Coverage Results" MODIFIED="1716967751494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ascent$LevelTest.coverage" NAME="LevelTest Coverage Results" MODIFIED="1712838234622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/kitchen_world$ascent.coverage" NAME="ascent Coverage Results" MODIFIED="1716976355838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/kitchen_world$ascent.coverage" NAME="ascent Coverage Results" MODIFIED="1716977658847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

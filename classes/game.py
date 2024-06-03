@@ -26,7 +26,6 @@ class Game:
         }
         self.current_level_number = 0
 
-        # TODO: main menu save auswahl
         self.load_save(save)
 
         self.current_level = Level(self.tmx_maps[self.current_level_number or 0], self.window,

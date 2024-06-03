@@ -84,11 +84,11 @@ class Camera:
 
         if self.player:
             if start_sequence > 0:
-                if start_sequence > self.start_sequence_duration-1:
+                if start_sequence >= self.start_sequence_duration-1:
                     self.start_initiated = True
                     self.zoom('start')
                     self.focus('player')
-            elif self.start_initiated:
+            elif self.start_initiated or self.player.level.level_number != 0:
                 self.start_initiated = False
                 self.player.start = True
                 self.zoom()

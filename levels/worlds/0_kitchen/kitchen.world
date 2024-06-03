@@ -1,0 +1,27 @@
+{
+    "maps": [
+        {
+            "fileName": "screen_1_0.tmx",
+            "height": 184,
+            "width": 320,
+            "x": 320,
+            "y": 184
+        },
+        {
+            "fileName": "screen_0_1.tmx",
+            "height": 184,
+            "width": 320,
+            "x": 0,
+            "y": 0
+        },
+        {
+            "fileName": "screen_0_0.tmx",
+            "height": 184,
+            "width": 320,
+            "x": 0,
+            "y": 184
+        }
+    ],
+    "onlyShowAdjacentMaps": false,
+    "type": "world"
+}
